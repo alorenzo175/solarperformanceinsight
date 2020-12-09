@@ -2,8 +2,6 @@ name: Test Javascript
 
 on:
   push:
-    branches:
-      - main
   pull_request:
     paths:
       - 'dashboard/**'
@@ -32,6 +30,7 @@ jobs:
 
       - name: Upload coverage
         run: |
+          pwd
           bash <(curl -s https://codecov.io/bash) -Z -c -F javascript
         if: ${{ always() }}
 
