@@ -41,7 +41,6 @@ export default class InverterView extends ModelBase {
   @Prop() index!: number;
   @Prop() model!: string;
 
-  // no real change
   @Watch("model")
   changeModel(newModel: string) {
     if (newModel == "pvsyst") {
